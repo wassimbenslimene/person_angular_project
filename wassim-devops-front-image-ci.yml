@@ -1,0 +1,19 @@
+---
+- hosts: ansible-server
+  become: true
+
+  tasks:
+          - name: create docker image using dist files
+            command: docker build -t wassim-devops-front-image:latest .
+            args:
+              chdir: /opt/kubernetes
+
+          - name: create tag to image
+            command: docker tag wassim-devops-front-image wassim97/wassim-devops-front-image
+
+          - name: push image on to dockerhub
+            command: docker push wassim97/wassim-devops-front-image
+
+          - name: remove docker images from ansible server
+            command: docker rmi wassim-devops-front-image:latest wassim97/wassim-devops-front-image
+            ignore_errors: yes
