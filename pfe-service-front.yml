@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pfe-service-front
+  labels:
+    app: pfe-devops-front-project
+spec:
+  selector:
+    app: pfe-devops-front-project
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 80
