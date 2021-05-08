@@ -8,5 +8,5 @@ export function hideLoading() {
 
 export function doNothing () {}
 
-export const webServiceServer: string = 'http://3.87.61.209:31200';
+export const webServiceServer: string = 'http://18.234.191.144:31200';
 export const webServiceEndpoint: string = webServiceServer + '/personapp/api';
