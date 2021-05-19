@@ -9,10 +9,10 @@
               chdir: /opt/docker
 
           - name: create tag to image
-            command: docker tag wassim-devops-front-image wassim97/wassim-devops-front-image:1
+            command: docker tag wassim-devops-front-image wassim97/wassim-devops-front-image
 
           - name: push image on to dockerhub
-            command: docker push wassim97/wassim-devops-front-image
+            command: docker push wassim97/wassim-devops-front-image:1
 
           - name: remove docker images from ansible server
             command: docker rmi wassim-devops-front-image:latest wassim97/wassim-devops-front-image
