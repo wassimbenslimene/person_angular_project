@@ -17,3 +17,4 @@
           - name: remove docker images from ansible server
             command: docker rmi wassim-devops-front-image:latest wassim97/wassim-devops-front-image:1
             ignore_errors: yes
+test change for pfe
